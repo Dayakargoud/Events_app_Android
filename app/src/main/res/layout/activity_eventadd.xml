@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+         android:layout_height="match_parent">
+<ImageButton
+    android:id="@+id/addimage"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_margin="10dp"
+    android:src="@drawable/addimageicon"
+    android:scaleType="fitXY"
+    android:padding="8dp"
+    />
+<EditText
+    android:id="@+id/addtitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/addimage"
+   android:layout_margin="4dp"
+    android:hint="Title"
+    android:textStyle="bold"
+    android:maxLines="2"
+    />
+
+    <EditText
+    android:id="@+id/addDescription"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/addtitle"
+    android:layout_margin="10dp"
+        android:maxLines="4"
+    android:hint="Description" />
+        <EditText
+            android:id="@+id/addContactinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addDescription"
+            android:layout_margin="10dp"
+            android:maxLines="4"
+            android:hint="Contact info"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addContactinfo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/branches"> </Spinner>
+
+        <EditText
+            android:id="@+id/addRegistationFeeinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addContactinfo"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:maxLines="4"
+            android:hint="Registration Fee"
+            />
+        <EditText
+            android:id="@+id/addVenueinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addRegistationFeeinfo"
+            android:layout_margin="8dp"
+            android:maxLines="4"
+            android:hint="Venue"
+            />
+        <Button
+    android:id="@+id/postButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/addVenueinfo"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:text="ADD EVENT"
+            android:background="@drawable/login_signup_button_background"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    android:elevation="8dp"
+    />
+    </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

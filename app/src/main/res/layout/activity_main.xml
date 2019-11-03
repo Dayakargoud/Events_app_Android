@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/maintoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/toolbar_menu"
+        />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/mainDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize">
+    <android.support.design.widget.NavigationView
+        android:id="@+id/mainNavView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_items_menu"
+        android:background="#fafafa"
+        app:itemTextColor="#000000"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/maintoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fragment_contaner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?android:attr/actionBarSize">
+            </FrameLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/mainBottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:itemIconTint="@color/navi_item_selected"
+            app:itemTextColor="@color/navi_item_selected"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav_menuitems">
+
+        </android.support.design.widget.BottomNavigationView>
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavouriteFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav_info_TextView"
+            android:layout_margin="4dp"
+            android:layout_centerInParent="true"
+            android:text="You have not added any favourite yet"
+            android:visibility="invisible"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            />
+        <Button
+            android:id="@+id/fav_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:visibility="invisible"
+            android:background="@drawable/login_signup_button_background"
+            android:layout_below="@+id/fav_info_TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav_loading_progressbar"
+            android:layout_centerInParent="true"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/fav_RecyclerView"
+            android:layout_margin="1dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</FrameLayout>
